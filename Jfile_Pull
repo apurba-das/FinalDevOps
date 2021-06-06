@@ -6,7 +6,7 @@ pipeline {
                             label "Slave2"
                         }
                 steps {
-                        sh 'sudo docker pull apurba21/privaterepo1:latest'
+                        sh 'sudo docker pull 8003:8080 apurba21/privaterepo1:latest'
                       }
                 }
             }
