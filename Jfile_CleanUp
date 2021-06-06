@@ -1,0 +1,16 @@
+ 
+pipeline {
+        agent none        
+        stages {
+            stage ("CleanUp") {
+                    agent {
+                            label "Slave1"
+                        }
+                steps {
+                        sh "sudo docker stop $(docker ps -a -q)"
+                        sh "sudo docker rm $(sudo docker ps -a -q)"
+                        sh "docker kill $(docker ps -q)"
+                      }
+                }
+            }
+        }
