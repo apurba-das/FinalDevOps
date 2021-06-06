@@ -1,0 +1,13 @@
+pipeline {
+        agent none        
+        stages {
+            stage ("Pull Image from Private Docker Hub Repo") {
+                    agent {
+                            label "Slave2"
+                        }
+                steps {
+                        sh 'sudo docker pull apurba21/privaterepo1:latest'
+                      }
+                }
+            }
+        }
