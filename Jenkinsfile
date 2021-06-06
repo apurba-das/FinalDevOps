@@ -32,7 +32,6 @@ pipeline {
            steps {
                sh 'sudo docker login'
                sh 'sudo docker push apurba21/privaterepo1:latest'
-        }                  
           }
         }
      
@@ -53,4 +52,3 @@ pipeline {
         }
     }
 	}
-    
