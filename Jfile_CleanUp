@@ -9,7 +9,6 @@ pipeline {
                 steps {
                         sh 'sudo docker stop \$(sudo docker ps -a -q)'
                         sh 'sudo docker rm \$(sudo docker ps -a -q)'
-                        sh 'sudo docker kill \$(sudo docker ps -q)'
                       }
                 }
             }
