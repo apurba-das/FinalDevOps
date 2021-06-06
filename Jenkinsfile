@@ -43,14 +43,5 @@ pipeline {
  
            }
         }
-	stage('Run Docker container on remote hosts') {
-             agent {
-                            label "Master"
-                        }
-            steps {
-                sh "sudo docker -H ssh://jenkins@172.31.89.123 run -d -p 8003:8080 apurba21/privaterepo1"
- 
-           }
-        }
     }
 	}
