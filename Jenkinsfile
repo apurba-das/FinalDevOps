@@ -29,9 +29,9 @@ pipeline {
 	 
    	stage('Publish image to Private repository in Docker Hub') {
           
-            steps {
-        withDockerRegistry([ credentialsId: "dockerHub", url: "" ]) {
-          sh  'sudo docker push apurba21/privaterepo1:latest'
+           steps {
+               sh 'sudo docker login
+               sh 'sudo docker push apurba21/privaterepo1:latest'
         }                  
           }
         }
