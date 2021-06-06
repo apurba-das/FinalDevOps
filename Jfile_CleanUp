@@ -7,9 +7,9 @@ pipeline {
                             label "Slave1"
                         }
                 steps {
-                        sh "sudo docker stop '\$5'(docker ps -a -q)"
-                        sh "sudo docker rm '\$5'(sudo docker ps -a -q)"
-                        sh "docker kill '\$5'(docker ps -q)"
+                        sh 'sudo docker stop "\$5"(docker ps -a -q)'
+                        sh 'sudo docker rm "\$5"(sudo docker ps -a -q)'
+                        sh 'docker kill "\$5"(docker ps -q)'
                       }
                 }
             }
